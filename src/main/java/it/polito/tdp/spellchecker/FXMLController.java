@@ -52,10 +52,12 @@ public class FXMLController {
 
     @FXML
     void doSpellCheck(ActionEvent event) {
-    	String testoInserito = this.txtTestoInserito.getText();
+    	String testoInserito = this.txtTestoInserito.getText().toLowerCase();
     	String lingua = cmbLingua.getValue();
     	model.loadDictionary(lingua);
-    	this.txtParoleSbagliate.setText(model.spellCheckText(testoInserito).toString());
+    	this.txtParoleSbagliate.setText(model.stampaParoleErrate(model.spellCheckText(testoInserito)));
+    	this.txtNumeroErrori.setText("The text contains "+model.contaErrori(model.stampaParoleErrate(model.spellCheckText(testoInserito)))+" errors");
+    	this.txtTempoSpellCheck.setText("Spell check completed in "+ model.contaSecondiSpellCheck(testoInserito) +"seconds");
     }
 
     @FXML
