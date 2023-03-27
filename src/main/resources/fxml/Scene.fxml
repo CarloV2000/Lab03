@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.FXMLController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.spellchecker.FXMLController">
    <top>
       <Label text="Lab03_SpellChecker" textFill="#d453ae" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -18,7 +18,7 @@
       </Label>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="355.0" prefWidth="381.0" BorderPane.alignment="CENTER">
          <children>
             <HBox>
                <children>
@@ -38,7 +38,7 @@
                </VBox.margin></TextArea>
             <Button mnemonicParsing="false" onAction="#doSpellCheck" text="Spell check">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="290.0" right="10.0" top="10.0" />
                </VBox.margin></Button>
             <Label text="Wrong words : ">
                <VBox.margin>
@@ -50,17 +50,20 @@
                </VBox.margin></TextArea>
             <HBox prefHeight="96.0" prefWidth="240.0">
                <children>
-                  <Label fx:id="txtNumeroErrori" text="&quot;&quot;" textFill="#db1212">
+                  <Label fx:id="txtNumeroErrori" prefHeight="17.0" prefWidth="123.0" text="numeroErrori" textFill="#db1212">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin></Label>
-                  <Button mnemonicParsing="false" onAction="#doClearText" text="Clear text" />
+                  <Button mnemonicParsing="false" onAction="#doClearText" text="Clear text">
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin></Button>
                </children>
             </HBox>
-            <Label fx:id="txtTempoSpellCheck" text="&quot;&quot;">
-               <padding>
+            <Label fx:id="txtTempoSpellCheck" text="tempoEsecuzione">
+               <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding></Label>
+               </VBox.margin></Label>
          </children>
       </VBox>
    </center>

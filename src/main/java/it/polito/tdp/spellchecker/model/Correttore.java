@@ -89,9 +89,17 @@ public class Correttore {
 		return numParole;
 	}
 	public double contaSecondiSpellCheck(String s) {
-		double tic = System.currentTimeMillis()/1000;
+		double tic = System.currentTimeMillis()/1000.000000;
 		this.spellCheckText(s);
-		double toc = System.currentTimeMillis()/1000;
+		double toc = System.currentTimeMillis()/1000.000000;
 		return (toc-tic);
 	}
+	
+	/*public  List<Parola> spellCheckTextLinear(String s){
+		
+	}
+	
+	public  List<Parola> spellCheckTextDichotomic(String s){
+		
+	}*/
 }
